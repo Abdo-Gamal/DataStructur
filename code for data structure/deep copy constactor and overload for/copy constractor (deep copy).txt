@@ -1,0 +1,38 @@
+
+template <class ItemType>
+class StackType
+{public:
+..
+
+/ Copy constructor.
+StackType(const StackType<ItemType>& anotherStack);
+..
+};
+
+template <class ItemType>
+StackType<ItemType>::StackType(const StackType<ItemType>& anotherStack)
+{
+NodeType<ItemType>* ptr1;
+NodeType<ItemType>* ptr2;
+if (anotherStack.topPtr == NULL)
+topPtr = NULL;
+else
+{
+topPtr = new NodeType<ItemType>;
+topPtr->info = anotherStack.topPtr->info;
+ptr1 = anotherStack.topPtr->next;
+ptr2 = topPtr;
+while (ptr1 != NULL)
+{
+ptr2->next = new NodeType<ItemType>;
+ptr2 = ptr2->next;
+ptr2->info = ptr1->info;
+ptr1 = ptr1->next;
+} p
+tr2->next = NULL;
+}
+}
+in main 
+obj1 =obj2
+....
+

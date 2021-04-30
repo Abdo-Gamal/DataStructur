@@ -1,0 +1,17 @@
+#include "StackType.h" void ListType::RevPrint()
+{
+StackType<NodeType*> stack; NodeType* listPtr;
+listPtr = listData;
+while (listPtr != NULL) // Put pointers onto the stack.
+{
+stack.Push(listPtr);
+listPtr = listPtr->next;
+}/
+/ Retrieve pointers in reverse order and print elements.
+while (!stack.IsEmpty())
+{
+listPtr = stack.Top();
+stack.Pop();
+std::cout << listPtr->info;
+}
+}

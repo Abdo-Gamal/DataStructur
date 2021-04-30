@@ -1,0 +1,13 @@
+void QuickSort2(ItemType values[], int first, int last)
+{
+if (first < last)
+{
+int splitPt1;
+int splitPt2;
+Split2(values, first, last, splitPt1, splitPt2);
+// values[first]..values[splitPt2] <= splitVal
+// values[splitPt1+1]..values[last] > splitVal
+if (splitPt1 < last) QuickSort2(values, splitPt1, last);
+if (first < splitPt2) QuickSort2(values, first, splitPt2);
+}
+}

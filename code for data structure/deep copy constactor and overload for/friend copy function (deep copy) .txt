@@ -1,0 +1,32 @@
+template<class ItemType>
+class StackType
+{ p
+ublic:friend void Copy(StackType<ItemType>, StackType<ItemType>&);
+};
+// clint function
+template<class ItemType>
+void Copy(StackType<ItemType> original, StackType<ItemType>& copy)
+{
+if (original.topPtr == NULL)
+copy.topPtr = NULL;
+else
+{
+NodeType<ItemType>* ptr1;
+NodeType<ItemType>* ptr2;
+copy.topPtr = new NodeType<ItemType>;
+copy.topPtr->info = original.topPtr->info;
+ptr1 = original.topPtr->next;
+ptr2 = copy.topPtr;
+while (ptr1 != NULL)
+{
+ptr2->next = new NodeType<ItemType>;
+ptr2 = ptr2->next;
+ptr2->info = ptr1->info;
+ptr1 = ptr1->next;
+}p
+tr2->next = NULL;
+}
+}
+in main
+Copy(myStack, yourStack);
+

@@ -1,0 +1,8 @@
+void RevPrint(NodeType* listPtr)
+{
+if (listPtr != NULL)
+{
+RevPrint(listPtr->next);
+std::cout << listPtr->info << std::endl;
+}
+}

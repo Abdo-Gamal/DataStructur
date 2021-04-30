@@ -1,0 +1,35 @@
+bool DateType::operator<(DateType other) const
+{
+if (year < other.year)
+return true;
+else if (year > other.year)
+return false;
+else if (month < other.month)return true;
+else if (month > other.month)
+return false;
+else if (day < other.day)
+return true;
+else return false;
+} b
+ool DateType::operator>(DateType other) const
+{
+if (year > other.year)
+return true;
+else if (year < other.year)
+return false;
+else if (month > other.month)
+return true;
+else if (month < other.month)
+return false;
+else if (day > other.day)
+return true;
+else return false;
+} b
+ool DateType::operator==(DateType other) const
+{
+if (year == other.year && month == other.month && day == other.day)
+return true;
+else
+return false;
+}
+

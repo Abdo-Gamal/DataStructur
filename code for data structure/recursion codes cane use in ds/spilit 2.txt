@@ -1,0 +1,27 @@
+void Split2(ItemType values[], int first, int last,
+int& splitPt1, int& splitPt2)
+{
+ItemType splitVal = values[(first+last)/2];bool onCorrectSide;
+do
+{
+onCorrectSide = true;
+while (onCorrectSide) // Move first toward last.
+if (values[first] >= splitVal)
+onCorrectSide = false;
+else first++;
+onCorrectSide = true;
+while (onCorrectSide) // Move last toward first.
+if (values[last] <= splitVal)
+onCorrectSide = false;
+else
+last--;
+if (first <= last)
+{
+Swap(values[first], values[last]);
+first++;
+last--;
+}
+} while (first <= last);
+splitPt1 = first;
+splitPt2 = last;
+}

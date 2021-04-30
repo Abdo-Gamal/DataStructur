@@ -1,0 +1,12 @@
+template<class ItemType>
+void Delete(NodeType<ItemType>*& listPtr, ItemType item)
+{
+if (item == listPtr->info)
+{
+NodeType<ItemType>* tempPtr = listPtr;
+listPtr = listPtr->next;
+delete tempPtr;
+} e
+lse
+Delete(listPtr->next, item)
+}

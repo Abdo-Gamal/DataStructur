@@ -1,0 +1,13 @@
+template<class ItemType>
+void QuickSort(ItemType values[], int first, int last)
+{
+if (first < last)
+{
+int splitPoint;
+Split(values, first, last, splitPoint);
+// values[first]..values[splitPoint-1] <= splitVal
+// values[splitPoint] = splitVal
+// values[splitPoint+1]..values[last] > splitVal
+QuickSort(values, first, splitPoint-1);
+QuickSort(values, splitPoint+1, last);
+}}

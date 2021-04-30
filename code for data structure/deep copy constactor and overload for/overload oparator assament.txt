@@ -1,0 +1,40 @@
+template<class ItemType>
+class StackType
+{
+ public:
+..
+void operator=(StackType<ItemType>);
+..
+};
+
+template<class ItemType>
+void StackType<ItemType>::operator= (StackType<ItemType> anotherStack)
+{
+
+if (original.topPtr == NULL)
+anotherStack.topPtr = NULL;
+else
+{
+NodeType<ItemType>* ptr1;
+NodeType<ItemType>* ptr2;
+anotherStack.topPtr = new NodeType<ItemType>;
+anotherStack.topPtr->info = original.topPtr->info;
+ptr1 = topPtr->next;
+ptr2 = anotherStack.topPtr;
+while (ptr1 != NULL)
+{
+ptr2->next = new NodeType<ItemType>;
+ptr2 = ptr2->next;
+ptr2->info = ptr1->info;
+ptr1 = ptr1->next;
+}p
+tr2->next = NULL;
+}
+
+
+}
+//in main
+myStack = yourStack;==myStack.operator= (yourStack);
+
+
+
