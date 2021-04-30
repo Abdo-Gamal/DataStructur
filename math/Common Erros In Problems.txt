@@ -1,0 +1,24 @@
+﻿TLE time limit Exceed  check : 
+
+●	Check size of array should be same size of problem + 7.
+●	Calculate complexity of code  product all size of loops that inside others  and this number should be less than < 10^8.
+●	Check if  any loop go to infinite .
+●	If problem have file check that you makefile and put names correct.
+
+WR Wrong answer : 
+
+●	Read the problem statement again and ensure that you understand problem well and not missing anything. 
+●	Check size of array should be same size of problem + 7.
+●	Check if need long long or not.
+●	Check  the output format same or not like he need to print “YES” and you print “Yes”  or he need to print numbers
+ 1 2 3 and you print same numbers put you print after 3 space and he not
+●	Check constraint of input number might be huge and should store in string and you store it in long long.
+●	Check if you may need to use unsigned long long or double 
+●	Check that  you may get overflow or not then you should change code or equation to not make overflow like this 
+   a * b / c it can be  a * (b /c)  divide first the product 
+  
+
+Runtime:
+●	Check size of array.
+●	Check if you divide by zero
+
